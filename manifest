@@ -1,0 +1,34 @@
+C fix\sa\sfew\sbugs\sin\sthe\sib\sapi
+D 2011-06-08T06:09:19.642
+F ib.2010.sln bcf6ec90c5a6fe4380e19bcebed9b35180238743
+F ib.sln c458e8240e7a11ae28e0361278c3f7c1f3e837a5
+F src/.astylerc 679e669d3045184602acf9b4d6dec46569fcf419
+F src/CommonDefs.h f26bc8d96157528773dd34ad7d00f8f9afc8bd0a
+F src/Contract.h 03081ee9e9c4bf1d4e99b820d7f6eae1825fd5e5
+F src/EClient.h 72506615733e91354b4ce4fc4ebf03b766e793d2
+F src/EClientSocketBase.cpp 77588295bcc405aa496bc106942e74acce521e96
+F src/EClientSocketBase.h 9bcc978519ea5fc0cc498d43fd56ca993797bf32
+F src/EClientSocketBaseImpl.h 260382f76f0aa0b8a001f6cb98d8dfa6dcb633f6
+F src/EPosixClientSocket.cpp 3c6858e0bb1e72ca95fd5c5a2389bbe59396cc67
+F src/EPosixClientSocket.h 481525f99294043adbc5c256e4998dd97918333f
+F src/EPosixClientSocketPlatform.h 5339e9ad7d492891cf4d3bca7b287592a28e0f19
+F src/EWrapper.h c6e878b6f98ee3832763e745828a866f94cff3ae
+F src/Execution.h d0613ab1bfde69b6842d13f7cb78cfc800899b8d
+F src/IBString.h cefd409f308fc988fca2e5fc6dea145069729f2e
+F src/Order.h 01eb12892a9a4bc33958d85ecec406d7f3f6b406
+F src/OrderState.h eca24532e5b48f6f5d934b396185e56b1605693d
+F src/ScannerSubscription.h db0ba434a49a8e158d26f4e45b2af6b913215a57
+F src/TargetVersion.h c47c7726ce641adb405ccdb1b9fcb865ceaa4819
+F src/TwsSocketClientErrors.h 3439548410fd05ba3d7760b9aecaf9e38177cbe3
+F src/ib.2010.vcxproj ed62dc82aa812b5ef9bf41141fbd017b143eafec
+F src/ib.2010.vcxproj.filters f965ce1a3d74b86347614acc3582efd3d7e5f3f0
+F src/ib.vcproj 1d2e62095d0ca535d9b6330a7b3070878b0e4808
+F src/shared_ptr.h 5202655f2b3145b1d18390e5e27121637b56d7f2
+F src/stdafx.cpp d96837108e84eee67d204f0ae16716e795f61370
+F src/stdafx.h 9584686b4957f2bac842201ff91d321cb4622546
+F test/.astylerc 679e669d3045184602acf9b4d6dec46569fcf419
+F test/main.cpp f0a09aa4dab3afaa191c0b3ce876ad89f0fa9828
+P 2540acedeffc94978f66b3084e1565bb9481f2ca
+R 3e3a898e09174fbe1220cc3bab7eeaa4
+U rev
+Z bbb4370d8139aeb09b924281d0d12423

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>ib</ProjectName>
+    <ProjectGuid>{016A2570-54A2-49A6-8AB9-D065E9A53DEC}</ProjectGuid>
+    <RootNamespace>IBG</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>IB_NO_WSADATA;WIN32;_DEBUG;IB_USE_STD_STRING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>IB_NO_WSADATA;WIN32;NDEBUG;IB_USE_STD_STRING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CommonDefs.h" />
+    <ClInclude Include="Contract.h" />
+    <ClInclude Include="EClient.h" />
+    <ClInclude Include="EClientSocketBase.h" />
+    <ClInclude Include="EClientSocketBaseImpl.h" />
+    <ClInclude Include="EPosixClientSocket.h" />
+    <ClInclude Include="EPosixClientSocketPlatform.h" />
+    <ClInclude Include="EWrapper.h" />
+    <ClInclude Include="Execution.h" />
+    <ClInclude Include="ib_manifest.h" />
+    <ClInclude Include="ib_manifest.uuid.h" />
+    <ClInclude Include="IBString.h" />
+    <ClInclude Include="Order.h" />
+    <ClInclude Include="OrderState.h" />
+    <ClInclude Include="ScannerSubscription.h" />
+    <ClInclude Include="shared_ptr.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TargetVersion.h" />
+    <ClInclude Include="TwsSocketClientErrors.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\manifest">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Writing $(ProjectName)_%(Filename)%(Extension).h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">fmh -infile %(FullPath) -prefix "IB_" &gt; $(ProjectName)_%(Filename)%(Extension).h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_%(Filename)%(Extension).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Writing $(ProjectName)_%(Filename)%(Extension).h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">fmh -infile %(FullPath) -prefix "IB_" &gt; $(ProjectName)_%(Filename)%(Extension).h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)_%(Filename)%(Extension).h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\manifest.uuid">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Writing $(ProjectName)_%(Filename)%(Extension).h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">fmh -infile %(FullPath) -prefix "IB_" &gt; $(ProjectName)_%(Filename)%(Extension).h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_%(Filename)%(Extension).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Writing $(ProjectName)_%(Filename)%(Extension).h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">fmh -infile %(FullPath) -prefix "IB_" &gt; $(ProjectName)_%(Filename)%(Extension).h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)_%(Filename)%(Extension).h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EClientSocketBase.cpp" />
+    <ClCompile Include="EPosixClientSocket.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
